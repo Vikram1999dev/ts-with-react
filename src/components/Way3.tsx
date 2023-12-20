@@ -1,7 +1,7 @@
 import { Button } from 'react-bootstrap';
 
 type BackgroundColorProps = {
-  backgroundColor: string;
+  backgroundColor: 'red' | 'blue' | 'green';
   fontSize: number;
   pillShape?: boolean;
 };
@@ -11,6 +11,5 @@ export const Way3 = ({
   fontSize,
   pillShape,
 }: BackgroundColorProps) => {
-  fontSize.toUpperCase();
   return <Button>{backgroundColor}</Button>;
 };
