@@ -1,17 +1,18 @@
 import React from 'react';
-
-const convertCurrency = (amount: number, currency: string): string => {
-  return '';
-};
-
-//this will not throw any error
-convertCurrency(100, 'USD');
-
-//this will throw the error
-// that is
-//Argument of type 'number' is not assignable to parameter of type 'string'
-// convertCurrency(100,200)
+import { Way1 } from '../components/Way1';
+import { Way2 } from '../components/Way2';
+import { Way3 } from '../components/Way3';
 
 export const Home = () => {
-  return <h1>Home</h1>;
+  return (
+    <>
+      <h1>Home</h1>
+      {/* with props */}
+      <Way1 backgroundColor='blue' />
+      {/* with destructured props */}
+      <Way2 backgroundColor='blue' />
+      {/* with destructured props and types defined in another outside the component */}
+      <Way3 backgroundColor='blue' />
+    </>
+  );
 };
