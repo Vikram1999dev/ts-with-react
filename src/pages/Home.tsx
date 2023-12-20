@@ -5,10 +5,13 @@ export const Home = () => {
   return (
     <>
       <h1>Home</h1>
-      {/* now here we are getting error that fontSize is required as we
-      are not passing it but there is no error for pillShape as it is not required
-      because I added this '?' */}
-      <Way3 backgroundColor='blue' />
+      {/* in this we are getting error 
+      "Property 'toUpperCase' does not exist on type 'number' "
+      because we applied toUpperCase method on
+       fontSize which a number 
+       BUT
+       we won't find this error we are doing in js */}
+      <Way3 backgroundColor='blue' fontSize={15} />
     </>
   );
 };

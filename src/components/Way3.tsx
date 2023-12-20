@@ -6,6 +6,11 @@ type BackgroundColorProps = {
   pillShape?: boolean;
 };
 
-export const Way3 = ({ backgroundColor }: BackgroundColorProps) => {
+export const Way3 = ({
+  backgroundColor,
+  fontSize,
+  pillShape,
+}: BackgroundColorProps) => {
+  fontSize.toUpperCase();
   return <Button>{backgroundColor}</Button>;
 };
