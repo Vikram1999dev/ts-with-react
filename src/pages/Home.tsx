@@ -5,8 +5,9 @@ export const Home = () => {
   return (
     <>
       <h1>Home</h1>
-      {/* instead of accepting any string we are accepting the particular 
-      type of string */}
+      {/* if we want to combine different types
+      then we can define type separately and the add 
+      that in say main type definition */}
       <Way3 backgroundColor='blue' fontSize={15} />
     </>
   );

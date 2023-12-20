@@ -1,7 +1,9 @@
 import { Button } from 'react-bootstrap';
 
+type Color = 'red' | 'blue' | 'green';
+
 type BackgroundColorProps = {
-  backgroundColor: 'red' | 'blue' | 'green';
+  backgroundColor: Color;
   fontSize: number;
   pillShape?: boolean;
 };
