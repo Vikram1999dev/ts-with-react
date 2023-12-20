@@ -6,6 +6,7 @@ type BackgroundColorProps = {
   backgroundColor: Color;
   fontSize: number;
   pillShape?: boolean;
+  padding: [number, number, number, number];
 };
 
 export const Way3 = ({
