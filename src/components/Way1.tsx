@@ -1,8 +1,7 @@
-import { ReactNode } from 'react';
 import { Button } from 'react-bootstrap';
 
 type WayProps = {
-  children: ReactNode;
+  children: JSX.Element;
 };
 
 export const Way1 = ({ children }: WayProps) => {
