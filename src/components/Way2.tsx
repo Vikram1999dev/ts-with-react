@@ -1,13 +1,8 @@
+import { CSSProperties } from 'react';
 import { Button } from 'react-bootstrap';
 
-type Color = 'red' | 'blue' | 'green';
-
 type ButtonProps = {
-  style: {
-    backgroundColor: Color;
-    fontSize: number;
-    textColor: Color;
-  };
+  style: CSSProperties;
 };
 
 export const Way2 = ({ style }: ButtonProps) => {

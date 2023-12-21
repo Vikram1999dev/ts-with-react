@@ -1,24 +1,19 @@
 import React from 'react';
-import { Way1 } from '../components/Way1';
 import { Way2 } from '../components/Way2';
 
 export const Home = () => {
   return (
     <>
       <h1>Home</h1>
-      {/* one way to  define css */}
-      <Way1
-        backgroundColor='blue'
-        textColor='white'
-        fontSize={15}
-        padding={[2, 3, 6, 5]}
-      />
-      {/* another way to define css */}
+      {/* if you want css properties that can go upto
+      say 100 properties than can be quite cumbersome
+      so react give type so that we can specify to the type
+      and add as many as we want */}
       <Way2
         style={{
           backgroundColor: 'red',
           fontSize: 15,
-          textColor: 'green',
+          color: 'white',
         }}
       />
     </>
