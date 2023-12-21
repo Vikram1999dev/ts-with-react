@@ -1,9 +1,10 @@
+import { ReactNode } from 'react';
 import { Button } from 'react-bootstrap';
 
-type FunctionProps = {
-  onClick: (a: string) => number[];
+type WayProps = {
+  children: ReactNode;
 };
 
-export const Way1 = ({ onClick }: FunctionProps) => {
-  return <Button onClick={() => onClick('hello')}>Click</Button>;
+export const Way1 = ({ children }: WayProps) => {
+  return <Button>{children}</Button>;
 };
