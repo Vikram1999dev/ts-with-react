@@ -1,9 +1,16 @@
+import { Dispatch } from 'react';
 import { Button } from 'react-bootstrap';
 
 type WayProps = {
-  children: JSX.Element;
+  count: number;
+  setCount: Dispatch<React.SetStateAction<number>>;
 };
 
-export const Way1 = ({ children }: WayProps) => {
-  return <Button>{children}</Button>;
+export const Way1 = ({ count, setCount }: WayProps) => {
+  return (
+    <div>
+      <h1>{count}</h1>
+      <Button onClick={() => setCount((prev) => prev + 1)}>Increment</Button>
+    </div>
+  );
 };
