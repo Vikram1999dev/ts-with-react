@@ -1,10 +1,9 @@
-import { CSSProperties } from 'react';
 import { Button } from 'react-bootstrap';
 
 type ButtonProps = {
-  style: CSSProperties;
+  borderRadius: Record<string, number>;
 };
 
-export const Way2 = ({ style }: ButtonProps) => {
-  return <Button style={style}>CLick!!</Button>;
+export const Way2 = ({ borderRadius }: ButtonProps) => {
+  return <Button style={borderRadius}>CLick!!</Button>;
 };
