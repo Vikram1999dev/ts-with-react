@@ -6,7 +6,7 @@ export const Home = () => {
   return (
     <>
       <h1>Home</h1>
-      {/* if we only want to have jsx element as children */}
+      {/* if we only send state and setstate */}
       <Way1 count={count} setCount={setCount} />
     </>
   );
