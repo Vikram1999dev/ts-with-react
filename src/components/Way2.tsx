@@ -1,6 +1,15 @@
-import React from 'react';
 import { Button } from 'react-bootstrap';
 
-export const Way2 = ({ backgroundColor }: { backgroundColor: string }) => {
-  return <Button>{backgroundColor}</Button>;
+type Color = 'red' | 'blue' | 'green';
+
+type ButtonProps = {
+  style: {
+    backgroundColor: Color;
+    fontSize: number;
+    textColor: Color;
+  };
+};
+
+export const Way2 = ({ style }: ButtonProps) => {
+  return <Button style={style}>CLick!!</Button>;
 };
