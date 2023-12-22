@@ -80,23 +80,25 @@ type Seat = {
   name: string;
   visionary: boolean;
   company: Company;
-  parent_id: string;
+  parent_id?: string;
   childSeats: Seat[];
   eosUserList: User[];
   accountabilitiesList: Accountability[];
   attachmentsList: Attachment[];
 };
 
-type ParentData = {
-  id: string;
-  name: string;
-  visionary: boolean;
-  company: Company;
-  childSeats: Seat[];
-  eosUserList: User[];
-  accountabilitiesList: Accountability[];
-  attachmentsList: Attachment[];
-};
+// type ParentData = {
+//   id: string;
+//   name: string;
+//   visionary: boolean;
+//   company: Company;
+//   childSeats: Seat[];
+//   eosUserList: User[];
+//   accountabilitiesList: Accountability[];
+//   attachmentsList: Attachment[];
+// };
+
+type ParentData = Seat;
 
 // Use the types as the prop type for the child component
 type ChildComponentProps = {
