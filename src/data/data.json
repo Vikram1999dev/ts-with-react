@@ -1,0 +1,179 @@
+[
+  {
+    "id": "18a7d294-cd61-4ef6-af23-bda4c03a8e96",
+    "name": "Visionary123",
+    "visionary": true,
+    "company": {
+      "id": "1404ec57-131c-4390-a305-0dbd75213672",
+      "companyName": "Medellin Cartel ",
+      "industry": "Consumer Discretionary",
+      "employeeRange": "500-1k"
+    },
+    "childSeats": [
+      {
+        "id": "41df518c-c546-47b9-b0b8-df0acc22439a",
+        "name": "seat 7",
+        "visionary": false,
+        "company": {
+          "id": "1404ec57-131c-4390-a305-0dbd75213672",
+          "companyName": "Medellin Cartel ",
+          "industry": "Consumer Discretionary",
+          "employeeRange": "500-1k"
+        },
+        "parent_id": "18a7d294-cd61-4ef6-af23-bda4c03a8e96",
+        "childSeats": [],
+        "eosUserList": [
+          {
+            "id": "087b4712-a8f6-430a-b86b-9048c306a982",
+            "username": "vikram.dungarwal@cloudfirstgroup.com",
+            "firstName": "Vikram",
+            "lastName": "Dungarwal",
+            "bio": "",
+            "active": true,
+            "isDeleted": false,
+            "profileUrl": "https://npos.cloudfirstindia.com/media/pele.jpg",
+            "emailAddresses": [
+              {
+                "id": "e53b170c-a4be-49e3-aaac-fc57903cc48f",
+                "emailAddress": "vikram.dungarwal@cloudfirstgroup.com",
+                "emailType": "MAIN"
+              }
+            ],
+            "phoneNumbers": [],
+            "role": {
+              "id": "bf4bd9bf-aab3-447b-bbd0-a1ea20ac453c",
+              "roleCode": "0000",
+              "roleName": "OWNER"
+            },
+            "additionalInfo": {
+              "id": "2bba6839-f80e-486b-95ef-e24178d0d7b2",
+              "strengthFinder": {
+                "id": "e6f6089e-8688-4f8e-be33-fcbd52f489cf",
+                "strengths": ["qwe", "sad", "bvcx", "asdfg", "wer"],
+                "weakness": [""]
+              },
+              "emergencyContacts": [],
+              "address": {
+                "id": "1b8a84bc-c8ec-4aea-9212-85123d1e60e3",
+                "country": "",
+                "city": "",
+                "postalCode": "",
+                "streetAddress": "",
+                "state": ""
+              }
+            },
+            "userTeam": [],
+            "teams": [
+              {
+                "name": "Leadership Team",
+                "id": "116f6fc6-80b0-4ce0-b759-ced2b68a26fe",
+                "creationTimestamp": "2023-11-09T10:44:21",
+                "isLt": true,
+                "isProject": false,
+                "isPrivateTeam": false,
+                "users": [
+                  {
+                    "id": "087b4712-a8f6-430a-b86b-9048c306a982",
+                    "username": "vikram.dungarwal@cloudfirstgroup.com",
+                    "firstName": "Vikram",
+                    "lastName": "Dungarwal",
+                    "bio": "",
+                    "active": true,
+                    "isDeleted": false,
+                    "profileUrl": "https://npos.cloudfirstindia.com/media/pele.jpg",
+                    "emailAddresses": [
+                      {
+                        "id": "e53b170c-a4be-49e3-aaac-fc57903cc48f",
+                        "emailAddress": "vikram.dungarwal@cloudfirstgroup.com",
+                        "emailType": "MAIN"
+                      }
+                    ],
+                    "phoneNumbers": [],
+                    "role": {
+                      "id": "bf4bd9bf-aab3-447b-bbd0-a1ea20ac453c",
+                      "roleCode": "0000",
+                      "roleName": "OWNER"
+                    },
+                    "additionalInfo": {
+                      "id": "2bba6839-f80e-486b-95ef-e24178d0d7b2",
+                      "strengthFinder": {
+                        "id": "e6f6089e-8688-4f8e-be33-fcbd52f489cf",
+                        "strengths": ["qwe", "sad", "bvcx", "asdfg", "wer"],
+                        "weakness": [""]
+                      },
+                      "emergencyContacts": [],
+                      "address": {
+                        "id": "1b8a84bc-c8ec-4aea-9212-85123d1e60e3",
+                        "country": "",
+                        "city": "",
+                        "postalCode": "",
+                        "streetAddress": "",
+                        "state": ""
+                      }
+                    },
+                    "userTeam": []
+                  },
+                  {
+                    "id": "c10de69b-0944-4a22-890b-dc23083da554",
+                    "username": "vikramdungarwal100@gmail.com",
+                    "firstName": "Ganimi ",
+                    "lastName": "Kawa",
+                    "active": false,
+                    "isDeleted": false,
+                    "isInvited": true,
+                    "emailAddresses": [
+                      {
+                        "id": "891cd2bb-418d-49d4-be1a-346aed7b5107",
+                        "emailAddress": "vikramdungarwal100@gmail.com",
+                        "emailType": "MAIN"
+                      }
+                    ],
+                    "phoneNumbers": [],
+                    "role": {
+                      "id": "180885f8-650d-447e-9042-4e7656fb3b35",
+                      "roleCode": "0003",
+                      "roleName": "TEAM_MEMBER"
+                    },
+                    "userTeam": []
+                  }
+                ],
+                "companies": [
+                  {
+                    "id": "1404ec57-131c-4390-a305-0dbd75213672",
+                    "companyName": "Medellin Cartel ",
+                    "industry": "Consumer Discretionary",
+                    "employeeRange": "500-1k"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "accountabilitiesList": [
+          {
+            "id": "2d06d6d3-0915-4b68-b975-837a90604d22",
+            "name": "",
+            "description": "",
+            "createdBy": "Vikram Dungarwal",
+            "lastModifiedBy": "Vikram Dungarwal",
+            "creationTimestamp": "2023-12-14T20:23:17"
+          }
+        ],
+        "attachmentsList": [
+          {
+            "id": "40e61a64-5b2f-4094-b6ad-283f8378b813",
+            "uploaded": true,
+            "fileName": "issues (63).pdf",
+            "uploadUrl": "https://npos.cloudfirstindia.com/media/issues (63).pdf",
+            "createdBy": "Vikram Dungarwal",
+            "lastModifiedBy": "Vikram Dungarwal",
+            "creationTimestamp": "2023-12-18T19:11:16"
+          }
+        ]
+      }
+    ],
+    "eosUserList": [],
+    "accountabilitiesList": [],
+    "attachmentsList": []
+  }
+]

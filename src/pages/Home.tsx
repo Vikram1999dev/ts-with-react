@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Way1 } from '../components/Way1';
+import data from '../data/data.json';
 
 export const Home = () => {
-  const [count, setCount] = useState(0);
   return (
     <>
-      <h1>Home</h1>
-      {/* if we only send state and setstate */}
-      <Way1 count={count} setCount={setCount} />
+      <Way1 data={data} />
     </>
   );
 };
