@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <>
       <h1>Home</h1>
-      {/* to also specify the key types the 
+      {/* to also specify the types for keys 
       we use Record to do that */}
       <Way2
         borderRadius={{
