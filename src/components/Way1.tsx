@@ -1,47 +1,47 @@
-type Address = {
+interface Address {
   id: string;
   country: string;
   city: string;
   postalCode: string;
   streetAddress: string;
   state: string;
-};
+}
 
-type StrengthFinder = {
+interface StrengthFinder {
   id: string;
   strengths: string[];
   weakness: string[];
-};
+}
 
-type Role = {
+interface Role {
   id: string;
   roleCode: string;
   roleName: string;
-};
+}
 
-type EmailAddresses = {
+interface EmailAddresses {
   id: string;
   emailAddress: string;
   emailType: string;
-};
+}
 
-type Companies = {
+interface Companies {
   id: string;
   companyName: string;
   industry: string;
   employeeRange: string;
-};
+}
 
-type AccountabilitiesList = {
+interface AccountabilitiesList {
   id: string;
   name: string;
   description: string;
   createdBy: string;
   lastModifiedBy: string;
   creationTimestamp: string;
-};
+}
 
-type AttachmentsList = {
+interface AttachmentsList {
   id: string;
   uploaded: boolean;
   fileName: string;
@@ -49,16 +49,16 @@ type AttachmentsList = {
   createdBy: string;
   lastModifiedBy: string;
   creationTimestamp: string;
-};
+}
 
-type AdditionalInfo = {
+interface AdditionalInfo {
   id: string;
   strengthFinder: StrengthFinder;
   emergencyContacts: any[];
   address: Address;
-};
+}
 
-type Teams = {
+interface Teams {
   name: string;
   id: string;
   creationTimestamp: string;
@@ -67,9 +67,9 @@ type Teams = {
   isPrivateTeam: boolean;
   users: EosUserList[];
   companies: Companies[];
-};
+}
 
-type EosUserList = {
+interface EosUserList {
   id: string;
   username: string;
   firstName: string;
@@ -86,9 +86,9 @@ type EosUserList = {
   emergencyContacts?: any[];
   userTeam: any[];
   teams?: Teams[];
-};
+}
 
-type ChildSeats = {
+interface ChildSeats {
   id: string;
   name: string;
   visionary: boolean;
@@ -98,13 +98,13 @@ type ChildSeats = {
   eosUserList: EosUserList[];
   accountabilitiesList: AccountabilitiesList[];
   attachmentsList: AttachmentsList[];
-};
+}
 
 type ParentData = ChildSeats;
 
-type ChildComponentProps = {
+interface ChildComponentProps {
   data: ParentData[];
-};
+}
 
 export const Way1 = ({ data }: ChildComponentProps) => {
   return <div>{data[0].childSeats[0].id}</div>;
