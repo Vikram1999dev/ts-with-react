@@ -1,9 +1,9 @@
 import { Button } from 'react-bootstrap';
 
-type ButtonProps = {
-  borderRadius: Record<string, number>;
-};
+type URL = string;
 
-export const Way2 = ({ borderRadius }: ButtonProps) => {
-  return <Button style={borderRadius}>CLick!!</Button>;
+const url: URL = 'https://google.com';
+
+export const Way2 = () => {
+  return <Button>{url}</Button>;
 };
