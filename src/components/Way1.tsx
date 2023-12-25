@@ -1,13 +1,11 @@
 import React from 'react';
 
-interface URL {
-  url: string;
+// type color = 'red' | 'blue' | 'yellow';
+
+interface Color {
+  color: 'red' | 'blue' | 'yellow';
 }
-//
-// this will not work
-//
-const url: URL = 'https://google.com';
 
 export const Way1 = () => {
-  return <div>{url}</div>;
+  return <div>Hello</div>;
 };
