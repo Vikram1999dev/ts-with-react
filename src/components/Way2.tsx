@@ -1,9 +1,13 @@
-import { Button } from 'react-bootstrap';
+import { useState } from 'react';
 
-type URL = string;
-
-const url: URL = 'https://google.com';
-
+type User = {
+  name: string;
+  age: number;
+};
 export const Way2 = () => {
-  return <Button>{url}</Button>;
+  const [user, setUser] = useState<User | null>(null);
+  // to avoid any crash as user can be null 
+  // we use optional chaining
+  const name = user?.name;
+  return <button>Click!!</button>;
 };

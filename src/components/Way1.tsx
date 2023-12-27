@@ -1,17 +1,7 @@
-import React, { MouseEventHandler } from 'react';
+import { useState } from 'react';
 
-type ButtonProps = {
-  type: 'button' | 'submit' | 'reset';
-  color: 'red' | 'blue' | 'green';
-};
+export const Way1 = () => {
+  const [count, setCount] = useState<number>(0);
 
-type SuperButtonProps = ButtonProps & {
-  size: 'md' | 'lg';
-};
-
-export const Way1 = ({ size, type, color }: SuperButtonProps) => {
-  const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
-    console.log('clicked');
-  };
-  return <button onClick={handleClick}>Click!!</button>;
+  return <button>Click!!</button>;
 };
