@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useRef } from 'react';
 
 export const Way1 = () => {
-  const [count, setCount] = useState<number>(0);
-
-  return <button>Click!!</button>;
+  // here we don't need to type null explicitly
+  const ref = useRef<HTMLButtonElement>(null);
+  return <button ref={ref}>Click!!</button>;
 };
