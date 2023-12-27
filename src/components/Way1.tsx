@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 
 type ButtonProps = {
   type: 'button' | 'submit' | 'reset';
@@ -9,7 +9,9 @@ type SuperButtonProps = ButtonProps & {
   size: 'md' | 'lg';
 };
 
-// here rest is an array
 export const Way1 = ({ size, type, color }: SuperButtonProps) => {
-  return <button>Click</button>;
+  const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
+    console.log('clicked');
+  };
+  return <button onClick={handleClick}>Click!!</button>;
 };
