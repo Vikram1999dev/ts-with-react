@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-type User = {
-  sessionId: string;
-  name: string;
-};
+type ButtonColor = 'red' | 'blue' | 'green';
 
-// for example we have a guest but we don't have his name
-// now Guest will have only sessionId as type
-type Guest = Omit<User, 'name'>;
 export const Way1 = () => {
+  useEffect(() => {
+    // to assert that previousButtonColor will be ButtonColor(which is nothing but string)
+    //  and not string|null
+    //we can assert it like this
+    const previousButtonColor = localStorage.getItem(
+      'buttonColor',
+    ) as ButtonColor;
+  }, []);
+
   return <button>Click Me</button>;
 };
