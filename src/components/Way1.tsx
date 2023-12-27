@@ -1,7 +1,14 @@
-import { useRef } from 'react';
+import React from 'react';
+
+// this array is going to be read only
+const buttonTextOptions = ['Click', 'Click Me', 'Click Me Again'] as const;
 
 export const Way1 = () => {
-  // here we don't need to type null explicitly
-  const ref = useRef<HTMLButtonElement>(null);
-  return <button ref={ref}>Click!!</button>;
+  return (
+    <button>
+      {buttonTextOptions.map((option) => {
+        return option;
+      })}
+    </button>
+  );
 };
