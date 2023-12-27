@@ -1,14 +1,13 @@
 import React from 'react';
 
-// this array is going to be read only
-const buttonTextOptions = ['Click', 'Click Me', 'Click Me Again'] as const;
+type User = {
+  sessionId: string;
+  name: string;
+};
 
+// for example we have a guest but we don't have his name
+// now Guest will have only sessionId as type
+type Guest = Omit<User, 'name'>;
 export const Way1 = () => {
-  return (
-    <button>
-      {buttonTextOptions.map((option) => {
-        return option;
-      })}
-    </button>
-  );
+  return <button>Click Me</button>;
 };
