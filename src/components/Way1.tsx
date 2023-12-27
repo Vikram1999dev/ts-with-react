@@ -1,12 +1,15 @@
-import React, { ComponentPropsWithoutRef } from 'react';
+import React from 'react';
 
-type ButtonProps = ComponentPropsWithoutRef<'button'>;
+type ButtonProps = {
+  type: 'button' | 'submit' | 'reset';
+  color: 'red' | 'blue' | 'green';
+};
+
+type SuperButtonProps = ButtonProps & {
+  size: 'md' | 'lg';
+};
 
 // here rest is an array
-export const Way1 = ({ type, autoFocus, ...rest }: ButtonProps) => {
-  return (
-    <button type={type} autoFocus={autoFocus} {...rest}>
-      Click
-    </button>
-  );
+export const Way1 = ({ size, type, color }: SuperButtonProps) => {
+  return <button>Click</button>;
 };
