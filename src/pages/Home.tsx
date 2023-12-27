@@ -4,7 +4,8 @@ import { Way1 } from '../components/Way1';
 export const Home = () => {
   return (
     <>
-      {/* usage of assertion type */}
+      {/* VERY IMPORTANT */}
+      {/* usage of generics */}
       <Way1 />
     </>
   );

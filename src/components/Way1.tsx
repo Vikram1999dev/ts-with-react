@@ -1,16 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-type ButtonColor = 'red' | 'blue' | 'green';
+// in this case we need to provide the relationship between parameter and
+// return type
+//it can be of any type
+//so we use generics
+// here we need to add comma because we are working in tsx file
+// if we define function in old way we don't need to add comma
+const convertToArray = <T,>(value: T): T[] => {
+  return [value];
+};
+
+convertToArray(5);
+convertToArray('hello');
 
 export const Way1 = () => {
-  useEffect(() => {
-    // to assert that previousButtonColor will be ButtonColor(which is nothing but string)
-    //  and not string|null
-    //we can assert it like this
-    const previousButtonColor = localStorage.getItem(
-      'buttonColor',
-    ) as ButtonColor;
-  }, []);
-
   return <button>Click Me</button>;
 };
