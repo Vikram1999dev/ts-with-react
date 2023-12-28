@@ -1,15 +1,12 @@
-import React, { ReactNode } from 'react';
+import React, { useEffect } from 'react';
 
-// you can add type here
-//to make it extra clear that this a type
-import { type ButtonProps } from '../lib/types';
+export const Way1 = () => {
+  //here data is type of unknown so as to avoid any operations
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then((response) => response.json())
+      .then((data: unknown) => data.toString());
+  }, []);
 
-// RELATIONSHIP Remember that
-// that's why we use generics
-
-export const Way1 = <T extends ReactNode>({
-  countValue,
-  countHistory,
-}: ButtonProps<T>) => {
-  return <h1>{countValue}</h1>;
+  return <h1> </h1>;
 };

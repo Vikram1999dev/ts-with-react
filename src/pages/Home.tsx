@@ -4,10 +4,11 @@ import { Way1 } from '../components/Way1';
 export const Home = () => {
   return (
     <>
-      {/* here we are importing types defined
-      in other file */}
-      {/* basically used to centralize types */}
-      <Way1 countValue={5} countHistory={[1, 2, 3]} />
+      {/* here we are using unknown type
+    because for example we don't know what we will
+    get as data what will be its type and also to 
+    avoid 'any' type */}
+      <Way1 />
     </>
   );
 };
