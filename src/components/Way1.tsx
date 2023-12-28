@@ -54,7 +54,7 @@ type AttachmentsList = {
 type AdditionalInfo = {
   id: string;
   strengthFinder: StrengthFinder;
-  emergencyContacts: any[];
+  emergencyContacts: unknown[];
   address: Address;
 };
 
@@ -83,8 +83,8 @@ type EosUserList = {
   phoneNumbers: string[];
   role: Role;
   additionalInfo?: AdditionalInfo;
-  emergencyContacts?: any[];
-  userTeam: any[];
+  emergencyContacts?: unknown[];
+  userTeam: unknown[];
   teams?: Teams[];
 };
 
