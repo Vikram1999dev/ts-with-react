@@ -4,10 +4,10 @@ import { Way1 } from '../components/Way1';
 export const Home = () => {
   return (
     <>
-      {/* VERY IMPORTANT */}
-      {/* usage of generics in components say props */}
+      {/* here we are importing types defined
+      in other file */}
+      {/* basically used to centralize types */}
       <Way1 countValue={5} countHistory={[1, 2, 3]} />
-      <Way1 countValue={'A'} countHistory={['A', 'B', 'C']} />
     </>
   );
 };
