@@ -1,16 +1,16 @@
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 
 export const Way1 = () => {
-  const themeOptions = ['light', 'dark', 'system'];
-  const [selectedTheme, setSelectedTheme] = useState('light');
+  const themeOptions = [1, 2, 3];
+  const [selectedTheme, setSelectedTheme] = useState(4);
 
   return (
     <section className='min-h-screen flex flex-col items-center justify-center'>
       <h1 className='text-4xl mb-5 font-semibold'>Themes</h1>
       <ThemeOptions
         themeOptions={themeOptions}
-        setSelectedTheme={setSelectedTheme}
+        onThemeClick={(x) => setSelectedTheme(x)}
       />
       <p className='mt-10'>
         Selected theme:<strong>{selectedTheme}</strong>
@@ -21,16 +21,16 @@ export const Way1 = () => {
 
 const ThemeOptions = <T extends React.ReactNode>({
   themeOptions,
-  setSelectedTheme,
+  onThemeClick,
 }: {
   themeOptions: T[];
-  setSelectedTheme: Dispatch<SetStateAction<T>>;
+  onThemeClick: (x: T) => void;
 }) => {
   return (
     <ul className='list-disc'>
       {themeOptions.map((theme: T, index) => (
         <li key={index}>
-          <Button onClick={() => setSelectedTheme(theme)}>{theme}</Button>
+          <Button onClick={() => onThemeClick(theme)}>{theme}</Button>
         </li>
       ))}
     </ul>
