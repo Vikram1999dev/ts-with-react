@@ -2,122 +2,45 @@ import React from 'react';
 
 export const Way1 = () => {
   return (
-    <div className='form-container'>
-      <form action='/submit' method='post'>
-        <fieldset className='fieldset-container'>
-          <legend>Contact Information</legend>
-          <div className='d-flex'>
-            <div className='d-flex flex-column w-100'>
-              <label htmlFor='name'>Name:</label>
-              <input
-                className='input-field me-3'
-                type='text'
-                id='name'
-                name='name'
-                required
-              />
-            </div>
-            <div className='d-flex flex-column w-100'>
-              <label htmlFor='email'>Email:</label>
-              <input
-                className='input-field'
-                type='email'
-                id='email'
-                name='email'
-                required
-              />
-            </div>
-          </div>
-          <div className='d-flex flex-column'>
-            <label htmlFor='phone'>Phone:</label>
-            <input className='input-field' type='tel' id='phone' name='phone' />
-          </div>
-        </fieldset>
-
-        <fieldset className='fieldset-container'>
-          <legend>Account Information</legend>
-          <div className='d-flex flex-column'>
-            <label htmlFor='username'>Username:</label>
+    <div>
+      <form>
+        <h3>
+          <strong>Add New Course</strong>
+        </h3>
+        <div className='d-flex'>
+          <div className='d-flex flex-column w-100'>
+            <label htmlFor='course-title'>Course Title</label>
             <input
-              className='input-field'
               type='text'
-              id='username'
-              name='username'
-              required
+              name='course-title'
+              placeholder='Enter course/ event name'
             />
           </div>
 
-          <div className='d-flex'>
-            <div className='d-flex flex-column w-100'>
-              <label htmlFor='password'>Password:</label>
-              <input
-                className='input-field me-3'
-                type='password'
-                id='password'
-                name='password'
-                required
-              />
-            </div>
-            <div className='d-flex flex-column w-100'>
-              <label htmlFor='confirmPassword'>Confirm Password:</label>
-              <input
-                className='input-field'
-                type='password'
-                id='confirmPassword'
-                name='confirmPassword'
-                required
-              />
-            </div>
+          <div className='d-flex flex-column w-100'>
+            <label htmlFor='cover-img-upload'>Upload Cover Image</label>
+            <input type='file' name='cover-img-upload' id='file-input' />
           </div>
-        </fieldset>
+        </div>
 
-        <fieldset className='fieldset-container'>
-          <legend>Additional Information</legend>
+        <div className='d-flex flex-column'>
+          <label htmlFor='course-desc'>Course Description</label>
+          <input
+            type='text'
+            name='course-desc'
+            placeholder='Enter course/ event description'
+          />
+        </div>
 
-          <div className='d-flex flex-column'>
-            <label htmlFor='birthdate'>Birthdate:</label>
-            <input
-              className='input-field'
-              type='date'
-              id='birthdate'
-              name='birthdate'
-            />
-          </div>
-
-          <div className='d-flex flex-column'>
-            <label htmlFor='gender'>Gender:</label>
-            <select id='gender' name='gender'>
-              <option value='male'>Male</option>
-              <option value='female'>Female</option>
-              <option value='other'>Other</option>
-            </select>
-          </div>
-        </fieldset>
-
-        <fieldset className='fieldset-container'>
-          <legend>Interests</legend>
-          <div className='d-flex flex-column'>
-            <label htmlFor='interests'>Select your interests:</label>
-            <select id='interests' name='interests'>
-              <option value='music'>Music</option>
-              <option value='sports'>Sports</option>
-              <option value='movies'>Movies</option>
-              <option value='books'>Books</option>
-            </select>
-          </div>
-        </fieldset>
-
-        <fieldset className='fieldset-container'>
-          <legend>Message</legend>
-          <div className='d-flex flex-column'>
-            <label htmlFor='message'>Message:</label>
-            <textarea id='message' name='message' rows={4} cols={50} />
-          </div>
-        </fieldset>
-
-        <button className='mt-3' type='submit'>
-          Submit
-        </button>
+        <div className='d-flex flex-column'>
+          <label htmlFor='will-learn'>What you will learn in course</label>
+          <textarea
+            name="'will-learn"
+            cols={30}
+            rows={10}
+            placeholder='Description'
+          ></textarea>
+        </div>
       </form>
     </div>
   );
