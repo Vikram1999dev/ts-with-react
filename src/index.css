@@ -2,18 +2,46 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: #ffffffcc;
 }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.form-container {
+  padding: 2em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* in one line there should be only two input field */
+
+.fieldset-container {
+  margin-top: 1em;
+}
+
+.input-field {
+  padding: 0.375em;
+  border-radius: 0.25em;
+  border: 0.5px solid #333;
+}
+
+select {
+  padding: 0.25em;
+  border-radius: 0.25em;
+  border: 0.5px solid #333;
+}
+
+textarea {
+  padding: 0.25em;
+  border-radius: 0.25em;
+  border: 0.5px solid #333;
+}
+
+button {
+  background-color: blue;
+  padding: 0.5em 1.5em;
+  outline: none;
+  color: white;
+  border: 0.5px solid #333;
+  border-radius: 0.25em;
+}
+
+label {
+  margin-bottom: 0.5em;
 }
