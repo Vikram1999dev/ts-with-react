@@ -1,19 +1,38 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction, useState } from 'react';
 import { Button } from 'react-bootstrap';
 
 export const Way1 = () => {
-  const getIndexofArrayItem = <T, K>(arr1: T, arr2: K): [T, K] => {
-    return [arr1, arr2];
-  };
-
-  const arr: number[] = [55, 97, 65];
-  const str: string[] = ['hello', 'bye'];
-  const index = getIndexofArrayItem(arr, str);
+  const themeOptions = ['light', 'dark', 'system'];
+  const [selectedTheme, setSelectedTheme] = useState('light');
 
   return (
-    <div>
-      <Button>Find Index</Button>
-      <p>Index of 77 in the array: {index}</p>
-    </div>
+    <section className='min-h-screen flex flex-col items-center justify-center'>
+      <h1 className='text-4xl mb-5 font-semibold'>Themes</h1>
+      <ThemeOptions
+        themeOptions={themeOptions}
+        setSelectedTheme={setSelectedTheme}
+      />
+      <p className='mt-10'>
+        Selected theme:<strong>{selectedTheme}</strong>
+      </p>
+    </section>
+  );
+};
+
+const ThemeOptions = <T extends React.ReactNode>({
+  themeOptions,
+  setSelectedTheme,
+}: {
+  themeOptions: T[];
+  setSelectedTheme: Dispatch<SetStateAction<T>>;
+}) => {
+  return (
+    <ul className='list-disc'>
+      {themeOptions.map((theme: T, index) => (
+        <li key={index}>
+          <Button onClick={() => setSelectedTheme(theme)}>{theme}</Button>
+        </li>
+      ))}
+    </ul>
   );
 };
