@@ -13,11 +13,7 @@ export const Home = () => {
   };
   return (
     <>
-      <Way1
-        data={data}
-        milestones={rocks}
-        statusMenuHandler={statusMenuHandler}
-      />
+      <Way1 data={data} milestones={rocks} />
     </>
   );
 };
