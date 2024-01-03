@@ -1,6 +1,6 @@
 import { Companies, EosUserList, Teams } from './CommonType';
 
-type Rocks = {
+export type Rocks = {
   id: string;
   title: string;
   description: string;
