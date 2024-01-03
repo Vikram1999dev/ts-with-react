@@ -1,10 +1,12 @@
 import React from 'react';
 import { ParentData } from '../types/SeatType';
 import { ParentRockObject } from '../types/RockType';
+
 type MainProps = {
   data: ParentData[];
   milestones: ParentRockObject[];
 };
+
 export const Way1 = ({ data, milestones }: MainProps) => {
   return (
     <div>
