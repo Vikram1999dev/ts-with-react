@@ -65,8 +65,9 @@ type Teams = {
   isLt: boolean;
   isProject: boolean;
   isPrivateTeam: boolean;
-  users: EosUserList[];
-  companies: Companies[];
+  users?: EosUserList[];
+  companies?: Companies[];
+  attachments?: AttachmentsList[];
 };
 
 type EosUserList = {
@@ -88,6 +89,37 @@ type EosUserList = {
   teams?: Teams[];
 };
 
+type Rocks = {
+  id: string;
+  title: string;
+  description: string;
+  dueDate: string;
+  originalDueDate: string;
+  isDepartmentalRock: boolean;
+  isCompanyRock: boolean;
+  isArchived: boolean;
+  isCompleted: boolean;
+  status: string;
+  user: EosUserList;
+  company: Companies;
+  teams: Teams[];
+};
+
+type ParentRockObject = {
+  id: string;
+  firstName: string;
+  lastName: string;
+  active: boolean;
+  teams: {
+    name: string;
+    id: string;
+    isLt: boolean;
+    isProject: boolean;
+    isPrivateTeam: boolean;
+  };
+  rocks: Rocks[];
+};
+
 type ChildSeats = {
   id: string;
   name: string;
@@ -102,10 +134,15 @@ type ChildSeats = {
 
 type ParentData = ChildSeats;
 
-type ChildComponentProps = {
+type MainProps = {
   data: ParentData[];
+  milestones: ParentRockObject[];
 };
-
-export const Way1 = ({ data }: ChildComponentProps) => {
-  return <div>{data[0].childSeats[0].id}</div>;
+export const Way1 = ({ data, milestones }: MainProps) => {
+  return (
+    <div>
+      <h1>{data[0].childSeats[0].id}</h1>
+      <h1>{milestones[0].rocks[7].title}</h1>
+    </div>
+  );
 };
