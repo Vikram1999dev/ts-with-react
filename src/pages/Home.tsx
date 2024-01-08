@@ -1,10 +1,10 @@
 import React from 'react';
-import { Way1 } from '../components/Way1';
+import { Carousel } from '../components/Carousel';
 
 export const Home = () => {
   return (
     <>
-      <Way1 />
+      <Carousel />
     </>
   );
 };
