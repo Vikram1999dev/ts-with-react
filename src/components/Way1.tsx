@@ -5,7 +5,7 @@ export const Way1 = () => {
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then((response) => response.json())
-      .then((data: unknown) => data.toString());
+      .then((data: unknown) => data?.toString());
   }, []);
 
   return <h1> </h1>;
