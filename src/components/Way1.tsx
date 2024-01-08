@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 
+type ThemeOptionsProps<T> = {
+  themeOptions: T[];
+  onThemeClick: (x: T) => void;
+};
+
 export const Way1 = () => {
   const themeOptions = [1, 2, 3];
   const [selectedTheme, setSelectedTheme] = useState(4);
@@ -22,10 +27,7 @@ export const Way1 = () => {
 const ThemeOptions = <T extends React.ReactNode>({
   themeOptions,
   onThemeClick,
-}: {
-  themeOptions: T[];
-  onThemeClick: (x: T) => void;
-}) => {
+}: ThemeOptionsProps<T>) => {
   return (
     <ul className='list-disc'>
       {themeOptions.map((theme: T, index) => (
