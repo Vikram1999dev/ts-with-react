@@ -1,16 +1,15 @@
-import React, { useEffect } from 'react';
-
-type ButtonColor = 'red' | 'blue' | 'green';
+import React, { useState } from 'react';
 
 export const Way1 = () => {
-  useEffect(() => {
-    // to assert that previousButtonColor will be ButtonColor(which is nothing but string)
-    //  and not string|null
-    //we can assert it like this
-    const previousButtonColor = localStorage.getItem(
-      'buttonColor',
-    ) as ButtonColor;
-  }, []);
+  const [state, setState] = useState({
+    foo: 1,
+    bar: 2,
+  });
+
+  const someMethod = (obj: typeof state) => {
+    // grabbing the type of state even though it was inferred
+    setState(obj); // this works
+  };
 
   return <button>Click Me</button>;
 };
