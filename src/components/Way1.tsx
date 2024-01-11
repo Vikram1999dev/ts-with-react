@@ -1,15 +1,9 @@
 import React from 'react';
 
-interface Way1ComponentProps {
-  name: string;
-  age: number;
-}
-
-export const Way1 = ({ name, age }: Way1ComponentProps) => {
-  return (
-    <div>
-      <p>Name: {name}</p>
-      <p>Age: {age}</p>
-    </div>
-  );
+export const Way1 = () => {
+  function foo(bar: string) {
+    return { baz: 1 };
+  }
+  type FooReturn = ReturnType<typeof foo>;
+  return <div></div>;
 };
