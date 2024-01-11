@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const Way1 = () => {
-  const [state, setState] = useState({
-    foo: 1,
-    bar: 2,
-  });
+interface Way1ComponentProps {
+  name: string;
+  age: number;
+}
 
-  const someMethod = (obj: typeof state) => {
-    // grabbing the type of state even though it was inferred
-    setState(obj); // this works
-  };
-
-  return <button>Click Me</button>;
+export const Way1 = ({ name, age }: Way1ComponentProps) => {
+  return (
+    <div>
+      <p>Name: {name}</p>
+      <p>Age: {age}</p>
+    </div>
+  );
 };
