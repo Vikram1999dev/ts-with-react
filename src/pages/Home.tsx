@@ -4,7 +4,7 @@ import { Way1 } from '../components/Way1';
 export const Home = () => {
   return (
     <>
-      {/* if we want to grab return type of function */}
+      {/* if we want to grab from object and its attributes */}
       <Way1 />
     </>
   );
