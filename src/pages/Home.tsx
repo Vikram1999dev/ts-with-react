@@ -6,7 +6,8 @@ export const Home = () => {
     <>
       {/* Leaning on TypeScript's Type Inference is great... until you realize you 
     need a type that was inferred, and have to go back and explicitly declare 
-    types/interfaces so you can export them for reuse. */}
+    types/interfaces so you can export them for reuse. 
+    with typeof you don't need to do that*/}
       <Way1 />
     </>
   );
